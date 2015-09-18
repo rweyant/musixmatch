@@ -22,10 +22,8 @@ get_album_tracks <- function(album_id,page_size=100,simplify=TRUE,...){
   result
 }
 
-
-## IN DEV ##
-
-
+#' Get information about the album
+#' @param album_id ID of album on musiXmatch
 get_album <- function(album_id,simplify=TRUE,...){
 
   body <- list(apikey=getOption('mmapikey'), album_id=album_id, format='xml')

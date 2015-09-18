@@ -57,7 +57,9 @@ get_artist_albums <- function(artist_id,page_size=100,simplify=TRUE,...){
 
 
 ## IN DEV ##
-
+#' Get information about an artist
+#'
+#' @param artist_id musixmatch artist id
 get_artist <- function(artist_id,simplify=TRUE,...){
 
   body <- list(apikey=getOption('mmapikey'), artist_id=artist_id, format='xml')
@@ -75,7 +77,9 @@ get_artist <- function(artist_id,simplify=TRUE,...){
   result
 }
 
-
+#' Get other similar artists
+#' @param artist_id musixmatch artist_id
+#' @param page_size
 get_artist_related <- function(artist_id,page_size=10,simplify=TRUE,...){
 
   body <- list(apikey=getOption('mmapikey'),

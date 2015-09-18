@@ -20,10 +20,10 @@ get_track_lyrics <- function(track_id,simplify=TRUE,...){
   result
 }
 
-
-### IN DEV ###
-
-
+#' Search for information about a track based on its artist, name, or lyrics
+#' @param q_track track name
+#' @param q_artist artist name
+#' @param q_lyrics song lyrics
 search_track <- function(page_size=100,simplify=TRUE,...){
 
   body <- list(apikey=getOption('mmapikey'),
@@ -48,6 +48,8 @@ search_track <- function(page_size=100,simplify=TRUE,...){
   result
 }
 
+#' Get information about a track
+#' @param track_id the musixmatch track ID
 get_track <- function(track_id,simplify=TRUE,...){
 
   body <- list(apikey=getOption('mmapikey'),track_id=track_id,format='xml')
@@ -66,7 +68,9 @@ get_track <- function(track_id,simplify=TRUE,...){
   result
 }
 
-get_track_subtitle <- function(track_id,subtitle_format='irc',simplify=TRUE,...){
+#' Get subtitle of a track in LRC or DFXP format
+#' @param track_id musixmatch track ID
+get_track_subtitle <- function(track_id,subtitle_format='lrc',simplify=TRUE,...){
 
   body <- list(apikey=getOption('mmapikey'),track_id=track_id,subtitle_format=subtitle_format,format='xml')
   # Load optional arguments from dots
@@ -83,6 +87,9 @@ get_track_subtitle <- function(track_id,subtitle_format='irc',simplify=TRUE,...)
   result
 }
 
+#' Get a lyrics snipped for a track.  A lyrics snippet is a very short representation of a song lyrics.
+#' It’s usually twenty to a hundred characters long and it’s calculated extracting a sequence of words from the lyrics.
+#' @param track_id the musixmatch track ID
 get_track_snippet <- function(track_id,simplify=TRUE,...){
 
   body <- list(apikey=getOption('mmapikey'),track_id=track_id,format='xml')
@@ -97,6 +104,9 @@ get_track_snippet <- function(track_id,simplify=TRUE,...){
   result
 }
 
+#' Submit a lyrics to Musixmatch database.
+#' @param track_id the musixmatch track ID
+#' @param lyrics_body the lyrics
 post_track_lyrics <- function(track_id,lyrics_body,simplify=TRUE,...){
 
   body <- list(apikey=getOption('mmapikey'),track_id=track_id,lyrics_body=lyrics_body,format='xml')
@@ -111,6 +121,10 @@ post_track_lyrics <- function(track_id,lyrics_body,simplify=TRUE,...){
   result
 }
 
+#' Post feedback to a lyrics submission on musixmatch
+#' @param lyrics_id musixmatch lyrics id
+#' @param track_id the musixmatch track_id
+#' @param feedback the feedback to be reported
 post_track_lyrics_feedback <- function(track_id,lyrics_id,feedback,simplify=TRUE,...){
 
   body <- list(apikey=getOption('mmapikey'),track_id=track_id,lyrics_id=lyrics_id,feedback,format='xml')
