@@ -14,7 +14,7 @@ get_track_lyrics <- function(track_id,simplify=TRUE,...){
 
   check_status_code(status_code(request))
 
-  if( simplify )  result <- simplify_get_lyrics(content(request))
+  if( simplify && FALSE)  result <- simplify_get_lyrics(content(request))
   else result <- get_full_list(content(request))
 
   result
@@ -81,7 +81,7 @@ get_track_subtitle <- function(track_id,subtitle_format='lrc',simplify=TRUE,...)
 
   check_status_code(status_code(request))
 
-  if( simplify && FALSE )  result <- simplify_get_chart_artist(content(request))
+  if( simplify && FALSE )  result <- simplify_get_track_subtitle(content(request))
   else result <- get_full_list(content(request))
 
   result
@@ -98,7 +98,7 @@ get_track_snippet <- function(track_id,simplify=TRUE,...){
 
   check_status_code(status_code(request))
 
-  if( simplify && FALSE )  result <- simplify_get_chart_artist(content(request))
+  if( simplify && FALSE )  result <- simplify_get_track_snippet(content(request))
   else result <- get_full_list(content(request))
 
   result
@@ -115,7 +115,7 @@ post_track_lyrics <- function(track_id,lyrics_body,simplify=TRUE,...){
 
   check_status_code(status_code(request))
 
-  if( simplify && FALSE )  result <- simplify_get_chart_artist(content(request))
+  if( simplify && FALSE )  result <- simplify_post_track_lyrics(content(request))
   else result <- get_full_list(content(request))
 
   result
@@ -133,7 +133,7 @@ post_track_lyrics_feedback <- function(track_id,lyrics_id,feedback,simplify=TRUE
 
   check_status_code(status_code(request))
 
-  if( simplify && FALSE )  result <- simplify_get_chart_artist(content(request))
+  if( simplify && FALSE )  result <- simplify_post_track_lyrics_feedback(content(request))
   else result <- get_full_list(content(request))
 
   result

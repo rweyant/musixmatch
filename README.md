@@ -1,5 +1,8 @@
 # musiXmatch API wrapper in R
 
+[musixmatch](https://www.musixmatch.com/) is a large online catalog of music lyrics, among other song/artist data.  
+This project is still very, very much under development.
+
 ## Usage
 
 ```{r}
@@ -11,30 +14,30 @@ set_apikey(YOUR_APIKEY)
 
 ```{r}
 # Return data.frame of most useful fields to identify artist
-get_artist('slayer')
+search_artist('slayer')
 
 # Return list of full XML result in a list
-get_artist(artist = 'slayer',type = 'list')
+search_artist(artist = 'slayer',simplify=FALSE)
 ```
 
 ### Get album discography of artist (**artist.albums.get**)
 
 ```{r}
-# Return data.frame of most useful fields to identify albums of an artist
-get_albums(2683)
+# Return full list of result for album.  Content simplification not functional yet.
+get_album(14250417)
 ```
 
 ### Get all tracks from an album (**album.tracks.get**)
 
 ```{r}
 # Return data.frame of most useful fields related to tracks on an album
-get_tracks(10324491)
+get_track(15445219)
 ```
 
 ### Get Lyrics from a song (**track.lyrics.get**)
 ```{r}
-# Returns lyrics of a song
-get_lyrics(13809615)
+# Returns lyrics of a song. Content simplification still under development.
+get_track_lyrics(15445219)
 ```
 
 

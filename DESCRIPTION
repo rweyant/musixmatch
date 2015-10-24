@@ -3,8 +3,8 @@ Type: Package
 Title: musiXmatch API Wrapper For R
 Version: 0.1
 Date: 2015-09-12
-Authors@R: person("First", "Last", email = "first.last@example.com", role = c("aut", "cre"))
-Description: This package contains functions to facilitate making API calls from R.
+Authors@R: person("Robert", "Weyant", email = "robert.weyant@gmail.com", role = c("aut", "cre"))
+Description: This package contains functions to facilitate making musixmatch API calls from R.
 License: GNU General Public License v2.0
 Depends: R (>= 3.1.0)
 Imports:
