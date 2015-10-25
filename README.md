@@ -17,7 +17,7 @@ set_apikey(YOUR_APIKEY)
 search_artist('slayer')
 
 # Return list of full XML result in a list
-search_artist(artist = 'slayer',simplify=FALSE)
+search_artist(q_artist = 'slayer',simplify=FALSE)
 ```
 
 ### Get album discography of artist (**artist.albums.get**)

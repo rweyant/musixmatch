@@ -1,7 +1,3 @@
-suppressPackageStartupMessages(library(XML))
-suppressPackageStartupMessages(library(dplyr))
-suppressPackageStartupMessages(library(stringr))
-suppressPackageStartupMessages(library(httr))
 
 base_url <- 'http://api.musixmatch.com/ws/1.1/'
 
@@ -15,9 +11,6 @@ api_call <- function(method,body)
 
 
 #### IN DEVELOPMENT ###
-
-
-
 
 ## DEV
 # track.search
@@ -35,7 +28,6 @@ api_call <- function(method,body)
 # matcher.subtitle.get
 # tracking.url.get
 # catalogue.dump.get
-
 
 ## TEST
 # track.lyrics.get
